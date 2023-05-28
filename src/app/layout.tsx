@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     "Tailwind CSS",
     "Server Components",
     "TypeScript",
+    "QR Code Generator",
   ],
   authors: [
     {
@@ -76,7 +77,7 @@ export default function RootLayout({
           inter.className
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light">
           <SiteHeader />
           <main className="flex flex-1">{children}</main>
           <SiteFooter />
