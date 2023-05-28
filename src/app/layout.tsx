@@ -76,7 +76,7 @@ export default function RootLayout({
           inter.className
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <SiteHeader />
           <main className="flex flex-1">{children}</main>
           <SiteFooter />
