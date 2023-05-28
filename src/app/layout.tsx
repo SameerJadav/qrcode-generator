@@ -78,7 +78,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SiteHeader />
-          <main className="flex-1">{children}</main>
+          <main className="flex flex-1">{children}</main>
           <SiteFooter />
         </ThemeProvider>
       </body>
