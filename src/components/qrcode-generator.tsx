@@ -3,11 +3,19 @@
 import { useState } from "react"
 
 import { QRCodeCanvas } from "qrcode.react"
+import { HexColorPicker } from "react-colorful"
 
+import { Icons } from "./icons"
 import { Button } from "./ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu"
 
 export default function QRCodeGenerator() {
   const [linkInput, setLinkInput] = useState<string>("")
+  const [fgColor, setFgColor] = useState<string>("#000000")
 
   const downloadQRCode = () => {
     const canvas = document.getElementById("qrcode") as HTMLCanvasElement
@@ -20,9 +28,9 @@ export default function QRCodeGenerator() {
   }
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="my-6 flex flex-col items-center gap-4">
       <div className="rounded-md border bg-muted p-4">
-        <QRCodeCanvas value={linkInput} id="qrcode" />
+        <QRCodeCanvas value={linkInput} id="qrcode" fgColor={fgColor} />
       </div>
 
       <input
@@ -35,8 +43,24 @@ export default function QRCodeGenerator() {
         className="w-full rounded-md border bg-transparent px-4 py-2 outline-none hover:bg-muted hover:placeholder:text-secondary-foreground"
       />
 
-      <Button onClick={downloadQRCode} className="w-full">
-        Download QR Code
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline" className="flex w-full items-center gap-2">
+            <Icons.colorPalette className="h-6 w-6" />
+            <span>Foreground Color</span>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="p-4">
+          <HexColorPicker color={fgColor} onChange={setFgColor} />
+        </DropdownMenuContent>
+      </DropdownMenu>
+
+      <Button
+        onClick={downloadQRCode}
+        className="flex w-full items-center gap-2"
+      >
+        <Icons.download className="h-6 w-6" />
+        <span>Download QR Code</span>
       </Button>
     </div>
   )

@@ -1,8 +1,10 @@
 import {
+  Download,
   Laptop,
   type Icon as LucideIcon,
   LucideProps,
   Moon,
+  Palette,
   SunMedium,
   Twitter,
 } from "lucide-react"
@@ -14,6 +16,8 @@ export const Icons = {
   moon: Moon,
   twitter: Twitter,
   laptop: Laptop,
+  colorPalette: Palette,
+  download: Download,
   logo: (props: LucideProps) => (
     <svg
       viewBox="0 0 24 24"
