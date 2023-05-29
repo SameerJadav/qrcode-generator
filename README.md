@@ -1,22 +1,20 @@
-# next-template
+# QR Code Generator
 
-This template is a customized version of [shadcn/next-template](https://github.com/shadcn/next-template), tailored to meet my specific requirements. It incorporates Next.js 13, TailwindCSS, and adheres to best practices for web development. Feel free to use this template as a starting point for your next project if you find its setup appealing and suitable for your needs.
+Generate QR codes for any website instantly with this simple and user-friendly QR code generator. This project is inspired by [dub](https://dub.sh).
 
-## Usage
+## Tech Stack
 
-```bash
-npx create-next-app -e https://github.com/SameerJadav/next-template
-```
-
-## Features
-
-- Radix UI Primitives
+- Next.js
+- TypeScript
 - Tailwind CSS
-- Fonts with `next/font`
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Automatic import sorting with `@trivago/prettier-plugin-sort-imports`
-- Tailwind CSS class sorting, merging and linting.
+- Radix UI Primitives
+- [qrcode.react](https://www.npmjs.com/package/qrcode.react)
+
+**Note: I have used [next-template](https://github.com/SameerJadav/next-template), It incorporates Next.js 13, TailwindCSS, and adheres to best practices for web development.**
+
+## Contributing
+
+I welcome contributions from everyone! Feel free to contribute in any way you can to make this project even better. I'd love to hear from you!
 
 ## License
 
