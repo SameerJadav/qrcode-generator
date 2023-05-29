@@ -1,6 +1,8 @@
 import { Metadata } from "next"
 import { Inter } from "next/font/google"
 
+import { Analytics } from "@vercel/analytics/react"
+
 import { siteConfig } from "~/config/site"
 
 import { cn } from "~/lib/utils"
@@ -82,6 +84,7 @@ export default function RootLayout({
           <main className="flex flex-1">{children}</main>
           <SiteFooter />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
